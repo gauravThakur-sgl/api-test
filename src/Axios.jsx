@@ -41,7 +41,7 @@ export const Axios = () => {
       });
       const data = response.data;
       const newUser = {
-        id: data.id || Date.now,
+        id: data.id || Date.now(),
         first_name: data.first_name || first_name,
         last_name: data.last_name || last_name,
         email: data.email || email,
@@ -78,7 +78,7 @@ export const Axios = () => {
           email
         }
       );
-      if (response.ok) {
+      if (response.status >= 200 && response.status < 300) {
         setUsers((prevUsers) =>
           prevUsers.map((user) =>
             user.id === userId
