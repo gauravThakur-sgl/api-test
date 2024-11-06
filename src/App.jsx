@@ -1,9 +1,10 @@
 import "./App.css";
-import { Fetch } from "./Fetch";
+// import { Fetch } from "./Fetch";
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Root from "./Routes/Root";
 import Error from "./Error";
 import { Axios } from "./Axios";
+import { ReduxApi } from "./components/ReduxApi";
 
 // import { Swr } from "./Swr";
 
@@ -16,7 +17,7 @@ function App() {
       children: [
         {
           path: "fetch",
-          element: <Fetch />
+          element: <ReduxApi />
         },
         {
           path: "axios",

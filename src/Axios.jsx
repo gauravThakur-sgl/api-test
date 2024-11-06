@@ -75,7 +75,7 @@ export const Axios = () => {
         {
           first_name,
           last_name,
-          email
+          email,
         }
       );
       if (response.status >= 200 && response.status < 300) {
@@ -164,7 +164,7 @@ export const Axios = () => {
             </form>
           </div>
         </div>
-        <div className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 justify-center items-center mx-10 p-2">
+        <div className="">
           {users.map((user) => (
             <div
               key={user.id}
