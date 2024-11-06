@@ -1,7 +1,7 @@
 import axios from 'axios'
 export const fetchUserData = async () => {
     try {
-        const res = await axios.get("https://reqres.in/api/users");
+        const res = await axios.get("/");
         console.log(res.data.data)
         return res.data
     } catch (error) {
@@ -13,7 +13,7 @@ export const fetchUserData = async () => {
 
 export const addUserData = async (userData) => {
     try {
-        const res = await axios.post(`https://reqres.in/api/users/`, userData);
+        const res = await axios.post(`/`, userData);
         console.log(res.data.data)
         return res.data;
     } catch (error) {
@@ -23,7 +23,7 @@ export const addUserData = async (userData) => {
 
 export const EditUserData = async (userId,userData) => {
     try {
-        const res = await axios.put(`https://reqres.in/api/users/${userId}`, userData);
+        const res = await axios.put(`/${userId}`, userData);
         console.log(res.data.data)
         return res.data;
     } catch (error) {
@@ -33,7 +33,7 @@ export const EditUserData = async (userId,userData) => {
 
 export const deleteUserData = async (userId) => {
     try {
-        const res = await axios.delete(`https://reqres.in/api/users/${userId}`);
+        const res = await axios.delete(`/${userId}`);
         console.log(res.data.data)
         return userId;
     } catch (error) {
