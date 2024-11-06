@@ -53,10 +53,8 @@ export const Fetch = () => {
         email: data.email || email,
         avatar: `https://ui-avatars.com/api/?name=${first_name}+${last_name}`,
       };
-
       // Updating the local state
       setUsers((prevUsers) => [...prevUsers, newUser]);
-
       // Reset the form
       setUserData({
         first_name: "",
@@ -254,7 +252,6 @@ export const Fetch = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <p>{user.email}</p>
-
                     <button
                       onClick={() => handleDelete(user.id)}
                       className="py-1 px-3 text-medium border rounded-md text-red-500 hover:bg-red-500 hover:text-white"
